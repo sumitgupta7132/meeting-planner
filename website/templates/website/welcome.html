@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} Meeting Planner! {% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <div class="container">
+    <h1 align="center"> Welcome to the Meeting Planner!</h1>
+    <h5 align="center"> This is a demo app for Meeting Planning <em>A Single stop to manage meetings</em></h5>
+  </div>
+  <div class="container mt-4">
+    <h2 align="center"> Meetings</h2>
+    <div class="row">
+      {% for meeting in meetings %}
+
+      <div class="col-sm-6">
+        <div class="card m-2">
+          <div class="card-body">
+            <h5 class="card-title">{{ meeting.title }}</a> <span>{{ meeting.date }}</span>
+            </h5>
+            <a href="{% url 'detail' meeting.id %}" class="btn btn-primary"> See Details</a>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<li>
+
+
+  </a>
+</li>

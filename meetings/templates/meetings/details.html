@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Meeting Listed {% endblock%}
+{% block content %}
+<div class="container">
+    <div class="card-body">
+        <h5 class="card-title">{{ meeting.title }}</h5>
+        <p class="card-text">This meeting has been scheduled on {{ meeting.date }},
+            at {{ meeting.start_time }} in <strong> {{ meeting.room }}</strong></p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+    </div>
+</div>
+{% endblock %}
